@@ -10,12 +10,11 @@ import java.util.Scanner;
  */
 public class Main {
 
-    private static int[] moneyList = {-10, 20, -15};
-    private static int maxTime = 10;
-
     public static void main(String[] args) {
         try {
-            System.out.println("Полученная сумма: " + getAmountOfProfitFromOrders(maxTime, moneyList) +
+            int maxTime = getEnteredIntegerNumber("Введите время: ");
+            System.out.println("Заполните массив сумм.");
+            System.out.println("Полученная сумма: " + getAmountOfProfitFromOrders(maxTime, getEnteredIntegerArray()) +
                     " за " + maxTime + " времени.");
         } catch (NegativeNumbersInPayListException e) {
             System.err.println("Введены некорректные данные: список сумм оплаты содержит отрицательные числа.");
